@@ -4,7 +4,7 @@
 
 int main()
    {
-   Manager man;
+   Manager* man = new Manager; // Changed man to a pointer type
 
    Employee dan(1, "Dan");
    Employee mike(2, "Mike");
@@ -31,8 +31,8 @@ int main()
    alex.report();
    sarah.report();
    dan.work(5);
-   dan.report();
-   man.report();
+   dan.report();//1
+   man->report();
    alex.work(4);
    alex.work(3);
    alex.work(7);
@@ -44,7 +44,7 @@ int main()
    sarah.report();
    dan.work(8);
    dan.work(7);
-   man.report();
+   man->report();//2
    mike.work(11);
    mike.work(4);
    alex.work(7);
@@ -55,9 +55,9 @@ int main()
    mike.report();
    alex.report();
    sarah.report();
-   man.report();
-   man.report();
-
+   man->report();//3
+   man->report();//4
+    
 
    return 0;
    }
