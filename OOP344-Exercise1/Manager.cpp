@@ -1,4 +1,5 @@
 #include "Manager.h"
+#include "Employee.h"// added
 #include <iostream>
 
 Manager::Manager()
